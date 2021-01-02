@@ -4,6 +4,6 @@ node_js:
 services:
   - mysql
 before_install:
-  - mysql -u root --password="" < test/travis.sql
+  - source scripts/travis.sh
 script:
   - mysql scripts/test.sql
