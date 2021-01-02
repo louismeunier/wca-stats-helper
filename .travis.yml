@@ -6,4 +6,5 @@ services:
 before_install:
   - source scripts/travis.sh
 script:
-  - mysql -u root --password="" < scripts/test.sql
+  - mysql -u root --password="" < scripts/tests/test.sql
+  - mysql -u root --password="" < scripts/rankings.sql
