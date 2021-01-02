@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "12"
+services:
+  - mysql
+before_install:
+  - mysql -u root --password="" < test/travis.sql
+script:
+  - mysql scripts/test.sql
