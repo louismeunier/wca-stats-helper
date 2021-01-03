@@ -1,7 +1,8 @@
 #scripts/createData.sh
 #"demos"
 #mysql -u root --password="" < scripts/sql/tests/rankings_test.sql -ss > stats/test/test.json
-export event = "333"
+export event="333"
+echo $event
 #create ranks
 pwd
 #mysql -u root --password="" < scripts/sql/tests/rankingsTest.sql -ss
