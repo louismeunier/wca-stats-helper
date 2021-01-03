@@ -11,6 +11,7 @@ before_script:
   - touch stats/rank/averageRank.json
   - touch stats/rank/singleRank.json
   - touch stats/test/test.json
+  - echo "Please visit https://github.com/louismeunier/wca-stats-helper for more information" > stats/index.html
 script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/sql/averageRankings.sql -ss > stats/rank/averageRank.json
