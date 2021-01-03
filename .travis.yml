@@ -5,7 +5,7 @@ services:
   - mysql
 before_install:
   - source scripts/travis.sh
-  - echo -e "secure-file-priv = \"\"" | sudo tee -a ~travis/.my.cnf
+  - echo -e "[mysqld]\nsecure-file-priv = \"\"" | sudo tee -a ~travis/.my.cnf
   - sudo service mysql restart
 script:
   - mysql -u root --password="" < scripts/tests/test.sql
