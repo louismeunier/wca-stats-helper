@@ -9,9 +9,9 @@ before_script:
   - sudo service mysql restart
   - mkdir /home/travis/build/louismeunier/wca-stats-helper/stats
   - touch /home/travis/build/louismeunier/wca-stats-helper/stats/res.json
-  - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/
-  - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/stats
-  - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/stats/res.json
+  - chmod 1777 /home/travis/build/louismeunier/wca-stats-helper/
+  - chmod  1777 /home/travis/build/louismeunier/wca-stats-helper/stats
+  - chmod  1777 /home/travis/build/louismeunier/wca-stats-helper/stats/res.json
 script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/tests/test.sql
