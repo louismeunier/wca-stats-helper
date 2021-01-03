@@ -1,4 +1,6 @@
-language: minimal
+language: node_js
+node_js:
+  - stable
 services:
   - mysql
 before_script:
