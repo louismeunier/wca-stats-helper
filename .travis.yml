@@ -7,11 +7,10 @@ before_script:
   - pwd
   - echo -e "[mysqld]\nsecure_file_priv=\"\"" | sudo tee -a /etc/mysql/my.cnf
   - sudo service mysql restart
+  - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/
 script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/tests/test.sql
-  - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/
-after_script:
   - mysql -u root --password="" < scripts/rankings.sql 
 deploy:
   provider: pages
