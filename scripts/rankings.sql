@@ -6,4 +6,4 @@ SELECT JSON_ARRAYAGG(JSON_OBJECT(
     "continentRank",continentRank,
     "countryRank",countryRank
     )) 
-FROM RanksAverage  WHERE eventId="333" ORDER BY worldRank INTO OUTFILE "/home/travis/build/louismeunier/wca-stats-helper/stats/res.json";
+FROM RanksAverage  WHERE eventId="333" ORDER BY worldRank INTO OUTFILE "res.json";
