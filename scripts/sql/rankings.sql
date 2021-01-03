@@ -1,5 +1,5 @@
 USE wca; 
-JSON_ARRAY( JSON_OBJECT(
+SELECT JSON_ARRAY( JSON_OBJECT(
         "personId",personId,
         "eventId", eventId,
         "best", best,
