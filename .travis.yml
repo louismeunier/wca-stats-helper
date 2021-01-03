@@ -5,7 +5,7 @@ services:
   - mysql
 before_script:
   - pwd
-  - echo -e "[mysqld]\nsecure-file-priv = /home/travis/build/louismeunier/wca-stats-helper" | sudo tee -a ~travis/.my.cnf
+  - echo -e "[mysqld]\nsecure_file_priv=\"\"" | sudo tee -a ~travis/.my.cnf
   - sudo service mysql restart
 script:
   - source scripts/travis.sh
