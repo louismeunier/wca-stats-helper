@@ -1,10 +1,1 @@
-{"best": 553, "eventId": "333", "personId": "2009ZEMD01", "worldRank": 1, "countryRank": 1, "continentRank": 1}
-{"best": 559, "eventId": "333", "personId": "2012PARK03", "worldRank": 2, "countryRank": 1, "continentRank": 1}
-{"best": 598, "eventId": "333", "personId": "2017VILL41", "worldRank": 3, "countryRank": 1, "continentRank": 1}
-{"best": 606, "eventId": "333", "personId": "2010WEYE01", "worldRank": 4, "countryRank": 1, "continentRank": 1}
-{"best": 612, "eventId": "333", "personId": "2016KOLA02", "worldRank": 5, "countryRank": 1, "continentRank": 2}
-{"best": 613, "eventId": "333", "personId": "2012PONC02", "worldRank": 6, "countryRank": 2, "continentRank": 2}
-{"best": 619, "eventId": "333", "personId": "2011ETTE01", "worldRank": 7, "countryRank": 3, "continentRank": 3}
-{"best": 625, "eventId": "333", "personId": "2010WANG68", "worldRank": 8, "countryRank": 1, "continentRank": 4}
-{"best": 629, "eventId": "333", "personId": "2010BRAD01", "worldRank": 9, "countryRank": 4, "continentRank": 5}
-{"best": 631, "eventId": "333", "personId": "2015BORR01", "worldRank": 10, "countryRank": 2, "continentRank": 2}
+{"data": [{"best": 553, "eventId": "333", "personId": "2009ZEMD01", "worldRank": 1, "countryRank": 1, "continentRank": 1}, {"best": 559, "eventId": "333", "personId": "2012PARK03", "worldRank": 2, "countryRank": 1, "continentRank": 1}, {"best": 598, "eventId": "333", "personId": "2017VILL41", "worldRank": 3, "countryRank": 1, "continentRank": 1}, {"best": 606, "eventId": "333", "personId": "2010WEYE01", "worldRank": 4, "countryRank": 1, "continentRank": 1}, {"best": 612, "eventId": "333", "personId": "2016KOLA02", "worldRank": 5, "countryRank": 1, "continentRank": 2}, {"best": 613, "eventId": "333", "personId": "2012PONC02", "worldRank": 6, "countryRank": 2, "continentRank": 2}, {"best": 619, "eventId": "333", "personId": "2011ETTE01", "worldRank": 7, "countryRank": 3, "continentRank": 3}, {"best": 625, "eventId": "333", "personId": "2010WANG68", "worldRank": 8, "countryRank": 1, "continentRank": 4}, {"best": 629, "eventId": "333", "personId": "2010BRAD01", "worldRank": 9, "countryRank": 4, "continentRank": 5}, {"best": 631, "eventId": "333", "personId": "2015BORR01", "worldRank": 10, "countryRank": 2, "continentRank": 2}]}
