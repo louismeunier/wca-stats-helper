@@ -7,13 +7,15 @@ before_script:
   - pwd
   - mkdir stats
   - mkdir stats/test
-  - mkdir stats/averageRank
-  - touch stats/averageRank/res.json
+  - mkdir stats/rank
+  - touch stats/rank/averageRank.json
+  - touch stats/rank/singleRank.json
   - touch stats/test/test.json
 script:
   - source scripts/travis.sh
+  - mysql -u root --password="" < scripts/sql/averageRankings.sql -ss > stats/rank/averageRank.json
+  - mysql -u root --password="" < scripts/sql/singleRankings.sql -ss > stats/rank/singleRank.json
   - mysql -u root --password="" < scripts/sql/tests/rankings_test.sql -ss > stats/test/test.json
-#- mysql -u root --password="" < scripts/sql/rankings.sql > -h stats/averageRank/res.json
 deploy:
   provider: pages
   skip_cleanup: true
