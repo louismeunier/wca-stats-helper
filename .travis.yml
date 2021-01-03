@@ -6,11 +6,14 @@ services:
 before_script:
   - pwd
   - mkdir stats
+  - mkdir stats/test
+  - touch stats/test/test.json
   - touch stats/res.json
 script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/sql/tests/test.sql
-  - mysql -u root --password="" < scripts/sql/rankings.sql > stats/res.json
+ 
+  - mysql -u root --password="" < scripts/sql/rankings.sql > stats/test/test.json
   - head stats/res.json
 deploy:
   provider: pages
