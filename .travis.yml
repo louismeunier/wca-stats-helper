@@ -10,9 +10,7 @@ before_script:
 script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/tests/test.sql
-  - mysql -u root --password="" < scripts/rankings.sql 
-  - ls /var/lib/mysql
-  - cp /var/lib/mysql/res.json /home/travis/build/louismeunier/wca-stats-helper/stats/res.json
+  - mysql -u root --password="" < scripts/rankings.sql > stats/res.json
 deploy:
   provider: pages
   skip_cleanup: true
