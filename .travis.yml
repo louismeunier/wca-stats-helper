@@ -7,7 +7,9 @@ before_script:
   - pwd
   - echo -e "[mysqld]\nsecure_file_priv=\"\"" | sudo tee -a /etc/mysql/my.cnf
   - sudo service mysql restart
+  - mkdir /home/travis/build/louismeunier/wca-stats-helper/stats
   - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/
+  - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/stats
 script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/tests/test.sql
