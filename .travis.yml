@@ -15,4 +15,4 @@ deploy:
   keep_history: true
   local_dir: stats
   on:
-    branch: master
+    branch: gh-pages
