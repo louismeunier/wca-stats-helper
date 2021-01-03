@@ -14,4 +14,3 @@ do
     mysql -u root --password="" \
     -e "set @event='${event}'; source scripts/sql/singleRankings.sql ;" -ss > stats/rank/singles/$i.json
 done
-

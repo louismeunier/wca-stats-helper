@@ -10,7 +10,7 @@ before_script:
   - mkdir stats/rank
   - mkdir stats/rank/averages
   - mkdir stats/rank/singles
-  - echo "Please visit https://github.com/louismeunier/wca-stats-helper for more information" > stats/index.html
+  #- echo "Please visit https://github.com/louismeunier/wca-stats-helper for more information" > stats/index.html
 script:
   - source scripts/travis.sh
   - source scripts/createData.sh
