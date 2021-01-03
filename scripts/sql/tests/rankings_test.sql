@@ -1,5 +1,7 @@
-USE wca; 
-SELECT  JSON_OBJECT(
+USE wca;
+SELECT JSON_OBJECT(
+        "data",
+        SELECT  JSON_OBJECT(
         "personId",personId,
         "eventId", eventId,
         "best", best,
@@ -7,5 +9,5 @@ SELECT  JSON_OBJECT(
         "continentRank", continentRank,
         "countryRank", countryRank
         )
-
-FROM RanksAverage  WHERE eventId="333" AND worldRank<=10 ORDER BY worldRank ;
+        FROM RanksAverage  WHERE eventId="333" AND worldRank<=10 ORDER BY worldRank 
+) ;
