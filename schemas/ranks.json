@@ -1,0 +1,11 @@
+{
+    "data": [
+        {
+            "best":"number",
+            "eventId":"string",
+            "worldRank":"number",
+            "countryRank":"number",
+            "continentRank": "number"
+        }
+    ]
+}

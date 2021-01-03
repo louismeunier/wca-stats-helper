@@ -1,6 +1,4 @@
-language: node_js
-node_js:
-  - "12"
+language: minimal
 services:
   - mysql
 before_script:
@@ -16,9 +14,8 @@ script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/sql/averageRankings.sql -ss > stats/rank/averageRank.json
   - mysql -u root --password="" < scripts/sql/singleRankings.sql -ss > stats/rank/singleRank.json
-  - sudo apt install jsonlint
-  - jsonlint stats/*.json
-  - echo $1
+  - sudo pip install json-spec
+  - json validate --schema-file=schemas/ranks.json < stats/ranks/averageRanks.json
 deploy:
   provider: pages
   skip_cleanup: true
