@@ -1,5 +1,5 @@
 USE wca; 
-SELECT JSON_ARRAY( JSON_OBJECT(
+SELECT  JSON_OBJECT(
         "personId",personId,
         "eventId", eventId,
         "best", best,
@@ -7,5 +7,5 @@ SELECT JSON_ARRAY( JSON_OBJECT(
         "continentRank", continentRank,
         "countryRank", countryRank
         )
-)
+
 FROM RanksAverage  WHERE eventId="333" ORDER BY worldRank;
