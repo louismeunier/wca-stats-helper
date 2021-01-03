@@ -1,7 +1,7 @@
 USE wca;
 SELECT JSON_OBJECT(
         "data",
-        SELECT  JSON_ARRAYAGG(JSON_OBJECT(
+        JSON_ARRAYAGG(JSON_OBJECT(
         "personId",personId,
         "eventId", eventId,
         "best", best,
