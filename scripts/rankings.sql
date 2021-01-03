@@ -1,2 +1,9 @@
 USE wca;
-SELECT * FROM RanksAverage  WHERE eventId="333" AND personId="2016MEUN01" OR personId="2017ZHEN10";
+SELECT JSON_ARRAYAGG(JSON_OBJECT(
+    "eventId",eventId,
+    "best",best,
+    "worldRank",worldRank,
+    "continentRank",continentRank,
+    "countryRank",countryRank
+    )) 
+FROM RanksAverage  WHERE eventId="333" ORDER BY worldRank;
