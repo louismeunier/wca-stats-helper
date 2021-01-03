@@ -19,7 +19,7 @@ script:
   - sudo apt install jsonlint
   - jsonlint stats/*.json
   - echo $1
-  deploy:
+deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
