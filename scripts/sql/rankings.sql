@@ -6,5 +6,5 @@ SELECT JSON_ARRAY(JSON_OBJECT(
     "worldRank", worldRank,
     "continentRank", continentRank,
     "countryRank", countryRank
-    )) 
-FROM RanksAverage  WHERE eventId="333" ORDER BY worldRank;
+    )
+FROM RanksAverage  WHERE eventId="333" ORDER BY worldRank);
