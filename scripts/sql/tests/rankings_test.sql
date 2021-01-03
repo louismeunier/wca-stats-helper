@@ -8,6 +8,5 @@ SELECT JSON_OBJECT(
         "worldRank", worldRank,
         "continentRank", continentRank,
         "countryRank", countryRank
-        ))
-        FROM RanksAverage  WHERE eventId="333" AND worldRank<=10 ORDER BY worldRank 
-) ;
+        )) 
+) FROM RanksAverage  WHERE eventId="333" AND worldRank<=10 ORDER BY worldRank ;
