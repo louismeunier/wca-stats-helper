@@ -4,7 +4,8 @@
             "best":"number",
             "eventId":"string",
             "worldRank":"number",
-            "countryRank":"number"
+            "countryRank":"number",
+            "continentRank":"number"
         }
     ]
 }
