@@ -12,7 +12,7 @@ before_script:
   - touch stats/test/test.json
 script:
   - source scripts/travis.sh
-  - mysql -u root --password="" < scripts/sql/tests/rankings_test.sql -h > stats/test/test.json
+  - mysql -u root --password="" < scripts/sql/tests/rankings_test.sql -h -1 > stats/test/test.json
 #- mysql -u root --password="" < scripts/sql/rankings.sql > -h stats/averageRank/res.json
 deploy:
   provider: pages
