@@ -8,4 +8,4 @@ SELECT JSON_OBJECT(
                 "continentRank", continentRank,
                 "countryRank", countryRank
         )) 
-) FROM RanksSingle  WHERE eventId = @event ORDER BY worldRank ;
+) FROM RanksSingle  WHERE eventId=@event ORDER BY worldRank ;
