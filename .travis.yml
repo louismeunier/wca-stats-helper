@@ -16,8 +16,11 @@ script:
   - source scripts/travis.sh
   - mysql -u root --password="" < scripts/sql/averageRankings.sql -ss > stats/rank/averageRank.json
   - mysql -u root --password="" < scripts/sql/singleRankings.sql -ss > stats/rank/singleRank.json
-  - mysql -u root --password="" < scripts/sql/tests/rankings_test.sql -ss > stats/test/test.json
-deploy:
+after_script:
+  - sudo apt install jsonlint
+  - jsonlint stats/*.json
+  - echo $1
+  deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
