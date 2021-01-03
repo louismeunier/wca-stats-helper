@@ -8,6 +8,7 @@ before_script:
   - echo -e "[mysqld]\nsecure_file_priv=\"\"" | sudo tee -a /etc/mysql/my.cnf
   - sudo service mysql restart
   - mkdir /home/travis/build/louismeunier/wca-stats-helper/stats
+  - touch /home/travis/build/louismeunier/wca-stats-helper/stats/res.json
   - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/
   - chmod 755 /home/travis/build/louismeunier/wca-stats-helper/stats
 script:
