@@ -1,11 +1,3 @@
-JSON_OBJECT(
-        "personId",personId,
-        "eventId", eventId,
-        "best", best,
-        "worldRank", worldRank,
-        "continentRank", continentRank,
-        "countryRank", countryRank
-        )
 {"best": 553, "eventId": "333", "personId": "2009ZEMD01", "worldRank": 1, "countryRank": 1, "continentRank": 1}
 {"best": 559, "eventId": "333", "personId": "2012PARK03", "worldRank": 2, "countryRank": 1, "continentRank": 1}
 {"best": 598, "eventId": "333", "personId": "2017VILL41", "worldRank": 3, "countryRank": 1, "continentRank": 1}
