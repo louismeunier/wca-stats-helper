@@ -18,6 +18,7 @@ script:
   - mysql -u root --password="" < scripts/sql/singleRankings.sql -ss > stats/rank/singleRank.json
   - sudo pip install json-spec
   - json validate --schema-file=schemas/ranks.json < stats/rank/averageRank.json
+  - echo $1
 deploy:
   provider: pages
   skip_cleanup: true
