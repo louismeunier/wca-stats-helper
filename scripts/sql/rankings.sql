@@ -1,6 +1,6 @@
-USE wca;
-SELECT * FROM RanksAverage WHERE eventId="333" AND 
-SELECT JSON_ARRAYAGG(JSON_OBJECT(
+USE wca; 
+SELECT JSON_ARRAY(JSON_OBJECT(
+    "personId",personId,
     "eventId", eventId,
     "best", best,
     "worldRank", worldRank,
