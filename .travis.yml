@@ -5,6 +5,7 @@ services:
   - mysql
 before_script:
   - pwd
+  - head ~travis/.my.cnf
   - echo -e "[mysqld]\nsecure_file_priv=\"\"" | sudo tee -a ~travis/.my.cnf
   - sudo service mysql restart
 script:
