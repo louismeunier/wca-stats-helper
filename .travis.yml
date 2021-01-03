@@ -5,8 +5,6 @@ services:
   - mysql
 before_script:
   - pwd
-  - echo -e "[mysqld]\nsecure_file_priv=\"\"" | sudo tee -a /etc/mysql/my.cnf
-  - sudo service mysql restart
   - mkdir stats
   - touch stats/res.json
 script:
