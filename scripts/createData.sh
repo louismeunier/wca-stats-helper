@@ -13,4 +13,6 @@ do
     -e "set @event='${event}'; source scripts/sql/averageRankings.sql ;" -ss > stats/rank/averages/$i.json
     mysql -u root --password="" \
     -e "set @event='${event}'; source scripts/sql/singleRankings.sql ;" -ss > stats/rank/singles/$i.json
+    mysql -u root --password="" \
+    -e "set @event='${event}'; source scripts/sql/tests/rankingsTest.sql ;" -ss
 done
