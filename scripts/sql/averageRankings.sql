@@ -8,4 +8,4 @@ SELECT JSON_OBJECT(
                 "continentRank", continentRank,
                 "countryRank", countryRank
         )) 
-) FROM RanksAverage  WHERE eventId=@event ORDER BY worldRank ;
+) FROM RanksAverage  WHERE eventId=@event AND best IS NOT NULL ORDER BY worldRank ;
