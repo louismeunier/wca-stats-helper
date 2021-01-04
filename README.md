@@ -8,6 +8,8 @@ This was created as a way to easily get the would-be rank of any time of any eve
 
 ### Usage
 Make a GET request to https://louismeunier.github.io/wca-stats-helper/rank/:type/:event.json where `type` is either singles or averages, and `event` is any valid WCA event ID.
+
+In addition, https://louismeunier.github.io/wca-stats-helper/metadata.json provides some meta data about the current export, including the latest database export being used.
 #### Warning
 This request returns a rather large JSON file, particullarly for 333, pyram, and 222, with /singles/333.json being about 17 megabytes. 
 
