@@ -18,4 +18,4 @@ do
     
 done
 mysql -u root --password="" \
-    -e "USE wca; SELECT * FROM RanksAverage WHERE eventId=333bld AND worldRank<=5;" 
+    -e "USE wca; SELECT * FROM RanksAverage WHERE eventId=\"333bld\" AND worldRank<=5;" 
