@@ -15,7 +15,7 @@ do
     -e "set @event='${event}'; source scripts/sql/singleRankings.sql ;" -ss > stats/rank/singles/$i.json
    # mysql -u root --password="" \
     #-e "set @event='${event}'; source scripts/sql/tests/rankingsTest.sql ;" -ss
-    if [ $1 == "333bld"]
+    if [ $1 == "333bld" ]
     then
          mysql -u root --password="" \
         -e "set @event='${event}'; SELECT * FROM RanksAverage WHERE eventId=333bld AND worldRank<=5;" 
