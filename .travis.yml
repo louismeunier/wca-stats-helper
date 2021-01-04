@@ -9,6 +9,7 @@ before_script:
   - mkdir stats/rank/averages
   - mkdir stats/rank/singles
   - mkdir stats/rank/tests
+  - echo "<h1>404</h1><h2>Please see https://github.com/louismeunier/wca-stats-helper for help</h2>" > stats/404.html
 script:
   - source scripts/travis.sh
   - source scripts/createData.sh
