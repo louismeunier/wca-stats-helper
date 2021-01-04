@@ -13,7 +13,6 @@ do
     -e "set @event='${event}'; source scripts/sql/averageRankings.sql ;" -ss > stats/rank/averages/$i.json
     mysql -u root --password="" \
     -e "set @event='${event}'; source scripts/sql/singleRankings.sql ;" -ss > stats/rank/singles/$i.json
-   # mysql -u root --password="" \
-    #-e "set @event='${event}'; source scripts/sql/tests/rankingsTest.sql ;" -ss
-    mysql -u root --password="" -e "USE wca; SELECT * FROM RanksAverage WHERE eventId=\"333bld\" AND worldRank<=5;" 
+   mysql -u root --password="" \
+    -e "set @event='${event}'; source scripts/sql/tests/rankingsTest.sql ;" > stats/rank/tests/$i.json
 done
