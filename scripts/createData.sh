@@ -1,6 +1,6 @@
 #scripts/createData.sh
 #"demos"
-#mysql -u root --password="" < scripts/sql/tests/rankings_test.sql -ss > stats/test/test.json
+
 
 #create ranks
 events=("222" "333" "333bld" "333fm" "333oh" "444" "555" "666" "777" "sq1" "skewb" "pyram" "minx" "clock" "444bld" "555bld")
@@ -13,6 +13,11 @@ do
     -e "set @event='${event}'; source scripts/sql/averageRankings.sql ;" -ss > stats/rank/averages/$i.json
     mysql -u root --password="" \
     -e "set @event='${event}'; source scripts/sql/singleRankings.sql ;" -ss > stats/rank/singles/$i.json
-    mysql -u root --password="" \
-    -e "set @event='${event}'; source scripts/sql/tests/rankingsTest.sql ;" -ss
+   # mysql -u root --password="" \
+    #-e "set @event='${event}'; source scripts/sql/tests/rankingsTest.sql ;" -ss
+    if [ $1 == "333bld"]
+    then
+         mysql -u root --password="" \
+        -e "set @event='${event}'; SELECT * FROM RanksAverage WHERE eventId=333bld AND worldRank<=5;" 
+    fi
 done
