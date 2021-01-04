@@ -1,2 +1,2 @@
 USE wca;
-SELECT * FROM RanksAverage  WHERE eventId=@event AND worldRank<=5 ORDER BY worldRank ;
+SELECT * FROM RanksAverage WHERE worldRank=1;
