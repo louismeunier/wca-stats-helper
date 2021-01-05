@@ -4,8 +4,7 @@
 
 #create ranks
 events=("222" "333" "333bf" "333fm" "333oh" "444" "555" "666" "777" "sq1" "skewb" "pyram" "minx" "clock" "444bf" "555bf")
- mysql -u root --password="" \
-    -e "set @event='${event}'; source scripts/sql/tests/rankingsTest.sql ;"
+ mysql -u root --password="" < scripts/sql/tests/rankingsTest.sql>stats/test.json;
 
 for i in "${events[@]}"
 do
