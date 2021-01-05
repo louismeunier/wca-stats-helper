@@ -9,4 +9,4 @@ SELECT JSON_OBJECT(
                 "countryRank", countryRank,
                 "personId",personId
         )) 
-) FROM RanksSingle  WHERE eventId=@event AND best IS NOT NULL ORDER BY worldRank ;
+) FROM RanksSingle  WHERE eventId=@event AND best IS NOT NULL AND personId IS NOT NULL ORDER BY worldRank ;
