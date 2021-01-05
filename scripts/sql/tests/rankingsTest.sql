@@ -1,2 +1,2 @@
 USE wca;
-SELECT * FROM RanksAverage WHERE eventId="333" AND personId IS NULL;
+SELECT DISTINCT personId FROM RanksAverage;
