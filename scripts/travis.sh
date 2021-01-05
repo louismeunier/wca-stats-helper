@@ -6,3 +6,4 @@ mv wca_unzipped/metadata.json stats
 cp README.md stats
 mysql -u root --password="" < scripts/sql/setup.sql
 mysql -u root --password="" wca <  wca_unzipped/WCA_export.sql
+echo "EXPORT IMPORTED"
