@@ -1,2 +1,2 @@
 USE wca;
-SELECT * FROM RanksAverage WHERE eventId="333";
+SELECT personId FROM RanksAverage WHERE eventId="333" HAVING COUNT(personId)>1;
