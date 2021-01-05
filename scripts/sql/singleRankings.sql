@@ -6,6 +6,7 @@ SELECT JSON_OBJECT(
                 "best", best,
                 "worldRank", worldRank,
                 "continentRank", continentRank,
-                "countryRank", countryRank
+                "countryRank", countryRank,
+                "personId",personId
         )) 
 ) FROM RanksSingle  WHERE eventId=@event AND best IS NOT NULL ORDER BY worldRank ;
