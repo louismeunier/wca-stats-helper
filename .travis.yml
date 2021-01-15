@@ -13,6 +13,8 @@ before_script:
 script:
   - source scripts/travis.sh
   - source scripts/createData.sh
+before_deploy:
+  - source tests/sizeTest.sh
 deploy:
   provider: pages
   skip_cleanup: true

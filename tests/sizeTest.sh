@@ -1,0 +1,1 @@
+stat --printf="%s" .
