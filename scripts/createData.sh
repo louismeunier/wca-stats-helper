@@ -8,8 +8,8 @@ for i in "${events[@]}"
 do
     export event=$i
     echo $event
-    mysql -u root \
+    mysql --max_allowed_packet=20mb -u root \
     -e "set @event='${event}'; source scripts/sql/averageRankings.sql ;" -ss > stats/rank/averages/$i.json
-    mysql -u root \
+    mysql --max_allowed_packet=20mb -u root \
     -e "set @event='${event}'; source scripts/sql/singleRankings.sql ;" -ss > stats/rank/singles/$i.json
 done
