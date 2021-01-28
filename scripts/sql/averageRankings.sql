@@ -6,7 +6,6 @@ SELECT JSON_OBJECT(
                 "best", best,
                 "worldRank", worldRank,
                 "continentRank", continentRank,
-                "countryRank", countryRank,
-                "personId", personId
+                "countryRank", countryRank
         )) 
 ) FROM RanksAverage  WHERE eventId=@event ORDER BY worldRank ;
