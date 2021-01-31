@@ -17,4 +17,4 @@ SELECT JSON_OBJECT(
                 eventId=@event AND 
                 Countries.id=Persons.countryId AND
                 Persons.id=RanksAverage.personId
-        ORDER BY worldRank;
+        ORDER BY RanksAverage.worldRank;
