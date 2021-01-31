@@ -14,7 +14,7 @@ SELECT JSON_OBJECT(
         )) 
 ) FROM RanksAverage, Countries, Persons
         WHERE 
-                eventId=@event AND 
+                RanksAverage.eventId=@event AND 
                 Countries.id=Persons.countryId AND
                 Persons.id=RanksAverage.personId
         ORDER BY RanksAverage.worldRank;

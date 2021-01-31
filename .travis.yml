@@ -10,6 +10,9 @@ before_script:
   - sudo systemctl restart mysql
   - sudo mysql_upgrade
   - mysql --version 
+  - echo "[mysqld]" >> ~travis/.my.cnf
+  - echo "max_allowed_packet=500m" >> ~travis/.my.cnf
+  - service mysql restart
   - pwd
   - mkdir stats
   - mkdir stats/test
