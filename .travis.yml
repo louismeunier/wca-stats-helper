@@ -11,7 +11,7 @@ before_script:
   - sudo mysql_upgrade
   - mysql --version 
   - echo "[mysqld]" >> ~travis/.my.cnf
-  - echo "max_allowed_packet=500m" >> ~travis/.my.cnf
+  - echo "max_allowed_packet=1000m" >> ~travis/.my.cnf
   - sudo systemctl restart mysql
   - pwd
   - mkdir stats

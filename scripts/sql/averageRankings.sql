@@ -1,4 +1,5 @@
-USE wca;        
+USE wca; 
+SHOW VARIABLES LIKE "max_allowed_packet";       
 SELECT JSON_OBJECT(
         "data",
         JSON_ARRAYAGG(JSON_OBJECT(
