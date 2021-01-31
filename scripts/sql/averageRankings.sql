@@ -2,11 +2,19 @@ USE wca;
 SELECT JSON_OBJECT(
         "data",
         JSON_ARRAYAGG(JSON_OBJECT(
-                "eventId", eventId,
-                "best", best,
-                "worldRank", worldRank,
-                "continentRank", continentRank,
-                "countryRank", countryRank,
-                "personId", personId
+                "eventId", RanksAverage.eventId,
+                "best", RanksAverage.best,
+                "worldRank", RanksAverage.worldRank,
+                "continentRank", RanksAverage.continentRank,
+                "countryRank", RanksAverage.countryRank,
+                "personId", RanksAverage.personId,
+                "country", Countries.id,
+                "continent", Countries.continentId,
+                "iso2", Countries.iso2
         )) 
-) FROM RanksAverage  WHERE eventId=@event ORDER BY worldRank ;
+) FROM RanksAverage, Countries, Persons
+        WHERE 
+                eventId=@event AND 
+                Countries.id=Persons.countryId AND
+                Persons.id=RanksAverage.personId
+        ORDER BY worldRank;

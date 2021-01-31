@@ -1,1 +1,1 @@
-stat --printf="%s" .
+ls -hs
