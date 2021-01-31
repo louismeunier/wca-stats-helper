@@ -10,7 +10,7 @@ before_script:
   - sudo systemctl restart mysql
   - sudo mysql_upgrade
   - mysql --version 
-  - echo -e "[server]\nmax_allowed_packet=64M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
+  - echo -e "[server]\nmax_allowed_packet=128M" | sudo tee -a /etc/mysql/conf.d/drupal.cnf
   - sudo service mysql restart
   - pwd
   - mkdir stats
