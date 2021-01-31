@@ -12,7 +12,8 @@ before_script:
   - mysql --version 
   - echo "[mysqld]" >> ~travis/.my.cnf
   - echo "max_allowed_packet=500m" >> ~travis/.my.cnf
-  - service mysql restart
+  - service mysql restart 
+  - ""
   - pwd
   - mkdir stats
   - mkdir stats/test
