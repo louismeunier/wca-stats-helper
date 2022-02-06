@@ -4,6 +4,6 @@ yes|unzip -d wca_unzipped wca_export
 echo "EXPORT UNZIPPED"
 mv wca_unzipped/metadata.json stats
 cp README.md stats
-mysql -u root --password="" < scripts/sql/setup.sql
-mysql -u root --password="" wca <  wca_unzipped/WCA_export.sql
+mysql -h 127.0.0.1 -u root -ppassword < scripts/sql/setup.sql
+mysql -h 127.0.0.1 -u root -ppassword wca <  wca_unzipped/WCA_export.sql
 echo "EXPORT IMPORTED"
