@@ -4,6 +4,13 @@ on:
       - main
   schedule:
     - cron: '0 0 * * 0'
+services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+        ports:
+            - '8888:3306'
 jobs:
   create_data:
     runs-on: ubuntu-latest
@@ -14,7 +21,6 @@ jobs:
       - name: install mysql & setup dirs
         working-directory: ./
         run: |
-          sudo systemctl start mysql.service
           mkdir stats
           mkdir stats/test
           mkdir stats/rank
