@@ -1,4 +1,6 @@
 USE wca; 
+ALTER TABLE RanksAverage
+CONVERT TO CHARACTER SET utf8 COLLATE utf8mb4_0900_ai_ci;
 SELECT JSON_OBJECT(
         "data",
         JSON_ARRAYAGG(JSON_OBJECT(
